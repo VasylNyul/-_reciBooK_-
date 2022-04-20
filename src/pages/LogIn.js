@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-export default function Form() {
+export default function LogIn() {
 
 // States for registration
 const [name, setName] = useState('');
@@ -32,7 +32,7 @@ const handlePassword = (e) => {
 // Handling the form submission
 const handleSubmit = (e) => {
 	e.preventDefault();
-	if (name === '' || email === '' || password === '') {
+	if (email === '' || password === '') {
 	setError(true);
 	} else {
 	setSubmitted(true);
@@ -48,7 +48,7 @@ const successMessage = () => {
 		style={{
 		display: submitted ? '' : 'none',
 		}}>
-		<h1>Користувача {name} зареєстровано!!</h1>
+		<h1>Користувач {email} увійшов!!</h1>
 	</div>
 	);
 };
@@ -72,7 +72,7 @@ return (
 			<h1>reciBooK</h1>
 		</div>
 	<div>
-		<h3>Реєстрація</h3>
+		<h3>Вхід</h3>
 	</div>
 
 	{/* Calling to the methods */}
@@ -83,9 +83,7 @@ return (
 
 	<form>
 		{/* Labels and inputs for form data */}
-		<label className="label">Ім'я користувача</label>
-		<input onChange={handleName} className="input"
-		value={name} type="text" />
+		
 
 		<label className="label">Ел. пошта</label>
 		<input onChange={handleEmail} className="input"
@@ -95,11 +93,11 @@ return (
 		<input onChange={handlePassword} className="input"
 		value={password} type="password" />
 
-		<button onClick={handleSubmit} className="btn" type="submit">
-		Зареєструватись
-		</button>
-		<button onClick={handleSubmit} className="btn1" type="logIn">
+		<button onClick={handleSubmit} className="btn" type="logIn">
 		Увійти
+		</button>
+		<button onClick={handleSubmit} className="btn1" type="submit">
+		Зареєструватись
 		</button>
 	</form>
 	</div>

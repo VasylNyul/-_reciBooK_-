@@ -1,0 +1,7 @@
+{
+  "name": "recibook",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "custom"
+}

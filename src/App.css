@@ -32,6 +32,15 @@
   padding: 10px;
   margin: 10px auto;
   }
+  .btn1{
+    color: rgb(0, 0, 0);
+    background-color: rgb(197, 196, 196);
+    border-radius: 5px;
+    font-size: larger;
+    display: block;
+    padding: 10px;
+    margin: 10px auto;
+    }
   
   .messages{
   display: flex;
@@ -40,7 +49,7 @@
   
   .error{
   display: block;
-  background-color: red;
+  background-color: rgb(253, 85, 85);
   color: white;
   width: fit-content;
   height: 50px;
@@ -49,7 +58,7 @@
   
   .success{
   display: block;
-  background-color: lightblue;
+  background-color: rgb(173, 230, 186);
   color: black;
   width: fit-content;
   height: 50px;
