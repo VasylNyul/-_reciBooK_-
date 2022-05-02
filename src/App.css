@@ -5,6 +5,7 @@
   }
   
   .form {
+  text-align: center;
   color: rgb(0, 0, 0);
   height: 40px;
   width: 100%;
@@ -32,6 +33,7 @@
   padding: 10px;
   margin: 10px auto;
   }
+
   .btn1{
     color: rgb(0, 0, 0);
     background-color: rgb(197, 196, 196);
@@ -65,3 +67,4 @@
   padding: 5px;
   }
   
+ 

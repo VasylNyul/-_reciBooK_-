@@ -1,6 +1,9 @@
+import React from 'react';
 import { useState } from 'react';
+//import { useLocation } from "react-router";
+//import { useNavigate } from "react-router";
 
-export default function Regist() {
+ function Regist() {
 
 // States for registration
 const [name, setName] = useState('');
@@ -8,7 +11,7 @@ const [email, setEmail] = useState('');
 const [password, setPassword] = useState('');
 
 // States for checking the errors
-const [submitted, setSubmitted] = useState(false);
+const [/*submitted,*/ setSubmitted] = useState(false);
 const [error, setError] = useState(false);
 
 // Handling the name change
@@ -41,7 +44,7 @@ const handleSubmit = (e) => {
 };
 
 // Showing success message
-const successMessage = () => {
+/* const successMessage = () => {
 	return (
 	<div
 		className="success"
@@ -51,7 +54,7 @@ const successMessage = () => {
 		<h1>Користувача {name} зареєстровано!!</h1>
 	</div>
 	);
-};
+};*/
 
 // Showing error message if error is true
 const errorMessage = () => {
@@ -67,10 +70,8 @@ const errorMessage = () => {
 };
 
 return (
-	<div className="form">
-		<div>
-			<h1>reciBooK</h1>
-		</div>
+	
+	<div>
 	<div>
 		<h3>Реєстрація</h3>
 	</div>
@@ -78,7 +79,7 @@ return (
 	{/* Calling to the methods */}
 	<div className="messages">
 		{errorMessage()}
-		{successMessage()}
+		
 	</div>
 
 	<form>
@@ -98,10 +99,10 @@ return (
 		<button onClick={handleSubmit} className="btn" type="submit">
 		Зареєструватись
 		</button>
-		<button onClick={handleSubmit} className="btn1" type="logIn">
-		Увійти
-		</button>
+		
+		
 	</form>
 	</div>
 );
 }
+export default Regist

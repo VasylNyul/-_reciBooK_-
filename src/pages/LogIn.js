@@ -1,21 +1,16 @@
+import React from 'react';
 import { useState } from 'react';
+import {useNavigate} from 'react-router-dom';
 
-export default function LogIn() {
+ function LogIn() {
+	let navigate = useNavigate();
 
-// States for registration
-const [name, setName] = useState('');
 const [email, setEmail] = useState('');
 const [password, setPassword] = useState('');
 
 // States for checking the errors
 const [submitted, setSubmitted] = useState(false);
 const [error, setError] = useState(false);
-
-// Handling the name change
-const handleName = (e) => {
-	setName(e.target.value);
-	setSubmitted(false);
-};
 
 // Handling the email change
 const handleEmail = (e) => {
@@ -67,10 +62,7 @@ const errorMessage = () => {
 };
 
 return (
-	<div className="form">
-		<div>
-			<h1>reciBooK</h1>
-		</div>
+	<div>
 	<div>
 		<h3>Вхід</h3>
 	</div>
@@ -96,10 +88,17 @@ return (
 		<button onClick={handleSubmit} className="btn" type="logIn">
 		Увійти
 		</button>
-		<button onClick={handleSubmit} className="btn1" type="submit">
+
+		<button onClick={() => {
+            navigate ("/regist") ;
+        }} className="btn1">
 		Зареєструватись
 		</button>
+		
+		
 	</form>
 	</div>
 );
 }
+
+export default LogIn
