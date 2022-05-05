@@ -1,24 +1,36 @@
 import React from 'react'
 import './App.css';
-import LogIn from './pages/LogIn';
-import Regist from './pages/Register';
+import LogIn from './Components/LogIn/LogIn';
+import Regist from './Components/LogIn/Register';
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import NavBar from './Components/NavBar/NavBar';
+import Home from './Components/pages/Home'
+import NewRecipe from './Components/pages/NewRecipe';
+import Search from './Components/pages/Search';
+import ShopList from './Components/pages/ShopList';
+import Calendar from './Components/pages/Calendar';
 
-function App() {
+
+const App = () => {
   return (
-    <div className="App">
-			<h1 className='form'>reciBooK</h1>
-   
-
+  
 <Router>
+<NavBar/>
   <Routes>
-      <Route  path = "/" element = {<LogIn/>} />
+      <Route  path = "/" element = {<Home/>} />
+      <Route  path = "/newrecipe" element = {<NewRecipe/>} />
+      <Route  path = "/shoplist" element = {<ShopList/>} />
+      <Route  path = "/search" element = {<Search/>} />
+      <Route  path = "/calendar" element = {<Calendar/>} />
+     
+      <Route  path = "/login" element = {<LogIn/>} />
       <Route  path = "/regist" element = {<Regist/>} />
+
   </Routes>
 </Router> 
   
 
- </div>
+
   );
 }
 

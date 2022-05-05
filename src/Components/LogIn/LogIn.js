@@ -32,6 +32,7 @@ const handleSubmit = (e) => {
 	} else {
 	setSubmitted(true);
 	setError(false);
+	navigate ("/") ;
 	}
 };
 
@@ -62,7 +63,8 @@ const errorMessage = () => {
 };
 
 return (
-	<div>
+	<div className='App'>
+	
 	<div>
 		<h3>Вхід</h3>
 	</div>
@@ -83,7 +85,7 @@ return (
 
 		<label className="label">Пароль</label>
 		<input onChange={handlePassword} className="input"
-		value={password} type="password" />
+		value={password} type="password" name='пароль'/>
 
 		<button onClick={handleSubmit} className="btn" type="logIn">
 		Увійти
