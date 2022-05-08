@@ -1,21 +1,16 @@
+import React from 'react';
 import { useState } from 'react';
+import {useNavigate} from 'react-router-dom';
 
-export default function Form() {
+ function LogIn() {
+	let navigate = useNavigate();
 
-// States for registration
-const [name, setName] = useState('');
 const [email, setEmail] = useState('');
 const [password, setPassword] = useState('');
 
 // States for checking the errors
 const [submitted, setSubmitted] = useState(false);
 const [error, setError] = useState(false);
-
-// Handling the name change
-const handleName = (e) => {
-	setName(e.target.value);
-	setSubmitted(false);
-};
 
 // Handling the email change
 const handleEmail = (e) => {
@@ -32,11 +27,12 @@ const handlePassword = (e) => {
 // Handling the form submission
 const handleSubmit = (e) => {
 	e.preventDefault();
-	if (name === '' || email === '' || password === '') {
+	if (email === '' || password === '') {
 	setError(true);
 	} else {
 	setSubmitted(true);
 	setError(false);
+	navigate ("/") ;
 	}
 };
 
@@ -48,7 +44,7 @@ const successMessage = () => {
 		style={{
 		display: submitted ? '' : 'none',
 		}}>
-		<h1>Користувача {name} зареєстровано!!</h1>
+		<h1>Користувач {email} увійшов!!</h1>
 	</div>
 	);
 };
@@ -67,12 +63,10 @@ const errorMessage = () => {
 };
 
 return (
-	<div className="form">
-		<div>
-			<h1>reciBooK</h1>
-		</div>
+	<div className='App'>
+	
 	<div>
-		<h3>Реєстрація</h3>
+		<h3>Вхід</h3>
 	</div>
 
 	{/* Calling to the methods */}
@@ -83,9 +77,7 @@ return (
 
 	<form>
 		{/* Labels and inputs for form data */}
-		<label className="label">Ім'я користувача</label>
-		<input onChange={handleName} className="input"
-		value={name} type="text" />
+		
 
 		<label className="label">Ел. пошта</label>
 		<input onChange={handleEmail} className="input"
@@ -93,15 +85,22 @@ return (
 
 		<label className="label">Пароль</label>
 		<input onChange={handlePassword} className="input"
-		value={password} type="password" />
+		value={password} type="password" name='пароль'/>
 
-		<button onClick={handleSubmit} className="btn" type="submit">
-		Зареєструватись
-		</button>
-		<button onClick={handleSubmit} className="btn1" type="logIn">
+		<button onClick={handleSubmit} className="btn" type="logIn">
 		Увійти
 		</button>
+
+		<button onClick={() => {
+            navigate ("/regist") ;
+        }} className="btn1">
+		Зареєструватись
+		</button>
+		
+		
 	</form>
 	</div>
 );
 }
+
+export default LogIn
