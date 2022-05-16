@@ -1,0 +1,41 @@
+
+    .labelEdit{
+        display: block;
+        font-size: 15px;
+        color: rgb(00, 0, 0);
+        padding: 20npx;
+        
+    }  
+    .input1{
+    font-size: larger;
+    color: rgb(0, 0, 0);
+    padding: 80px;
+    margin: 50px;
+    
+    
+    }
+    .button{
+    color: rgb(250, 245, 245);
+    background-color: rgb(0, 0, 0);
+    border-radius: 10px;
+    font-size: larger;
+    display: block;
+    padding: 10px;
+    margin: 10px auto;
+    }  
+    .messages{
+    display: flex;
+    justify-content: center;
+    }
+    
+    .success{
+    display: block;
+    background-color: rgb(173, 230, 186);
+    color: black;
+    width: fit-content;
+    height: 50px;
+    padding: 5px;
+    }
+    
+   
+  

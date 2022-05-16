@@ -34,6 +34,9 @@ const NavBar = () => {
                 <Link to='/login' className='login'>
                 <li>Вхід</li>
                 </Link>
+                <Link to='/Edit' className='login'>
+                <li>Редагунная профілю</li>
+                </Link>
 
                 
 

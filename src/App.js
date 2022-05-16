@@ -9,7 +9,7 @@ import NewRecipe from './Components/pages/NewRecipe';
 import Search from './Components/pages/Search';
 import ShopList from './Components/pages/ShopList';
 import Calendar from './Components/pages/Calendar';
-
+import Edit from './Components/EditProfile/EditPtofile';
 
 const App = () => {
   return (
@@ -25,6 +25,7 @@ const App = () => {
      
       <Route  path = "/login" element = {<LogIn/>} />
       <Route  path = "/regist" element = {<Regist/>} />
+      <Route  path = "/Edit" element = {<Edit/>} />
 
   </Routes>
 </Router> 
