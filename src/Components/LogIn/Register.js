@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import {useNavigate} from 'react-router-dom';
+
 //import { useLocation } from "react-router";
 //import { useNavigate } from "react-router";
 
@@ -89,7 +90,7 @@ const errorMessage = () => {
 
 return (
 	
-	<div className='App'>
+	<div className='Regist'>
 	<div>
 		<h3>Реєстрація</h3>
 	</div>
