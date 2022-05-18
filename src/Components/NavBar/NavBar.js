@@ -4,6 +4,8 @@ import "./NavBar.css";
 import 'primeicons/primeicons.css';
 import { FaBookOpen, FaShoppingCart,FaRegCalendarAlt } from 'react-icons/fa';
 import { IoMdSearch, IoMdAdd } from 'react-icons/io'; 
+import {CgProfile} from "react-icons/cg";
+
 const NavBar = () => {
     const [isMobile, setIsMobile] = useState(false); 
   return (
@@ -11,9 +13,15 @@ const NavBar = () => {
         <nav className='navbar'>
             <h3 className='logo'>reciBooK</h3>
             <ul className='nav-links'>
+           
+
             <Link to='/login' className='login'>
                 <li>Вхід</li>
                 </Link>
+            <Link to='/profile' className='profile'>
+                <CgProfile/>
+                </Link>
+
             <ul className={isMobile ? 'nav-links-mobile' : 'nav-links-web'}
             onClick={()=> setIsMobile(false)}>
                 <Link to='/' className='home'>
