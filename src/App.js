@@ -1,21 +1,21 @@
 import React from 'react'
 import './App.css';
+import './Components/LogIn/LogIn.css'
 import LogIn from './Components/LogIn/LogIn';
 import Regist from './Components/LogIn/Register';
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import NavBar from './Components/NavBar/NavBar';
 import Home from './Components/pages/Home'
-import NewRecipe from './Components/pages/NewRecipe';
+import NewRecipe from './Components/pages/NewRecipe/NewRecipe';
 import Search from './Components/pages/Search';
-import ShopList from './Components/pages/ShopList';
+import ShopList from './Components/pages/ShopList/ShopList';
 import Calendar from './Components/pages/Calendar';
-
 
 const App = () => {
   return (
-  
-<Router>
-<NavBar/>
+    <Router>
+    <NavBar/>
+
   <Routes>
       <Route  path = "/" element = {<Home/>} />
       <Route  path = "/newrecipe" element = {<NewRecipe/>} />
@@ -28,6 +28,7 @@ const App = () => {
 
   </Routes>
 </Router> 
+
   
 
 
@@ -50,14 +51,10 @@ const App = () => {
  <button onClick={this.Regist} className="btn1" type="regist">
 		Зареєструватись
 		</button>
-
  const [regist, setRegister] = useState(false);
   const handleRegister = ( ) => {
 	  Regist();
     setRegister(true);}
-
-
-
 class App extends Component {
   constructor(props) {
     super(props);
@@ -91,15 +88,12 @@ class App extends Component {
 /*function App() {
   return (
     <div>
-
     <div className="App">
 			<h1>reciBooK</h1>
     </div>
-
     <div className="App">
       <LogIn/>
     
-
     </div>*/
 
     
@@ -123,7 +117,6 @@ class App extends Component {
             { this.state.LogIn }
           </div>
           <div className="App">
-
             <button className="btn1" onClick={this.updateContent}>
               Regist
             </button>
@@ -136,6 +129,4 @@ class App extends Component {
   
  
 export default App;
-
 */
-

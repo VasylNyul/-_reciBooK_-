@@ -2,50 +2,49 @@ import React, {useState} from 'react'
 import { Link } from 'react-router-dom';
 import "./NavBar.css";
 import 'primeicons/primeicons.css';
- 
+import { FaBookOpen, FaShoppingCart,FaRegCalendarAlt } from 'react-icons/fa';
+import { IoMdSearch, IoMdAdd } from 'react-icons/io'; 
 const NavBar = () => {
     const [isMobile, setIsMobile] = useState(false); 
   return (
     <div>
         <nav className='navbar'>
             <h3 className='logo'>reciBooK</h3>
-            <ul className={isMobile ? 'nav-links-mobile' : 'nav-links'}
+            <ul className='nav-links'>
+            <Link to='/login' className='login'>
+                <li>Вхід</li>
+                </Link>
+            <ul className={isMobile ? 'nav-links-mobile' : 'nav-links-web'}
             onClick={()=> setIsMobile(false)}>
                 <Link to='/' className='home'>
-                <li>Home</li>
-                </Link>
-
-                <Link to='/newrecipe' className='newrecipe'>
-                <li>NewRecipe</li>
-                </Link>
-
-                <Link to='/shoplist' className='shoplist'>
-                <li>ShopList</li>
+                <li> <FaBookOpen/>  Мої рецепти</li>
                 </Link>
 
                 <Link to='/search' className='search'>
-                <li>Search</li>
+                <li> <IoMdSearch/>  Пошук</li>
+                </Link>
+
+                <Link to='/newrecipe' className='newrecipe'>
+                <li> <IoMdAdd/>  Додати рецепт</li>
+                </Link>
+
+                <Link to='/shoplist' className='shoplist'>
+                <li> <FaShoppingCart/>  Список покупок</li>
                 </Link>
 
                 <Link to='/calendar' className='calendar'>
-                <li>Calendar</li>
+                <li> <FaRegCalendarAlt/>  Календар харчування</li>
                 </Link>
 
-                <Link to='/login' className='login'>
-                <li>Вхід</li>
-                </Link>
-
-                
-
+                </ul>
             </ul>
             <button className='mobile-menu-icon'
             onClick={() => setIsMobile(!isMobile)}
             >
-                {isMobile ? (
-                <i className='pi pi-times'></i> 
-                ):( 
-                <i className='pi-align-right'></i>
-                )}
+                {isMobile ? (<i className='pi pi-times'></i> )
+                :
+                ( <i className='pi-align-right'></i>)
+                }
             </button>
 
         </nav>

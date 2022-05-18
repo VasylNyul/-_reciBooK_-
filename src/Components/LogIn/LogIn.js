@@ -2,8 +2,11 @@ import React from 'react';
 import { useState } from 'react';
 import {useNavigate} from 'react-router-dom';
 
- function LogIn() {
-	let navigate = useNavigate();
+
+
+function LogIn() {
+
+let navigate = useNavigate();
 
 const [email, setEmail] = useState('');
 const [password, setPassword] = useState('');
@@ -63,7 +66,7 @@ const errorMessage = () => {
 };
 
 return (
-	<div className='App'>
+	<div className='LogIn'>
 	
 	<div>
 		<h3>Вхід</h3>
@@ -84,8 +87,10 @@ return (
 		value={email} type="email" />
 
 		<label className="label">Пароль</label>
-		<input onChange={handlePassword} className="input"
+		<input onChange={handlePassword} className="input" 
 		value={password} type="password" name='пароль'/>
+
+
 
 		<button onClick={handleSubmit} className="btn" type="logIn">
 		Увійти
