@@ -134,7 +134,7 @@ class RecipeInput extends Component {
             className="buttons"
             style={{alignSelf: 'flex-end', marginRight: 0}}
           >
-            Зберегти
+            +
           </button>
         </form>
       </div>

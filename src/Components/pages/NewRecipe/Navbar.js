@@ -27,4 +27,8 @@ class Navbar extends Component {
   }
 }
 
+<<<<<<< HEAD
 export default Navbar;
+=======
+export default Navbar;
+>>>>>>> yaryna
