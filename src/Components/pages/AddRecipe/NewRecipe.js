@@ -1,21 +1,18 @@
 import React, { Component } from 'react';
-import Navbar from './Navbar';
 import RecipeInput from './RecipeInput';
-import RecipeList from './RecipeList';
 import './NewRecipe.css';
 
-class NewRecipe extends Component {
+class AddRecipe extends Component {
   constructor(props) {
     super(props);
     this.state = {
       recipes: [
       ],
       nextRecipeId: 3,
-      showForm: false
+      
     }
     
     this.handleSave = this.handleSave.bind(this);
-    this.onDelete = this.onDelete.bind(this);
   }
   
   handleSave(recipe) {
@@ -29,26 +26,20 @@ class NewRecipe extends Component {
     });
   }
   
-  onDelete(id) {
-    const recipes = this.state.recipes.filter(r => r.id !== id);
-    this.setState({recipes});
-  }
+  
   
   render() {
     const {showForm} = this.state;
     return (
-      <div className="App">
-        <Navbar onNewRecipe={() => this.setState({showForm: true})} />
-        { showForm ?
+      <div className="newRecipe">
+        
             <RecipeInput 
               onSave={this.handleSave}
-              onClose={() => this.setState({showForm: false})}  
-            /> :
-            null }
-        <RecipeList onDelete={this.onDelete} recipes={this.state.recipes} />
-      </div>
+              
+            /> 
+             </div>
     );
   }
 }
 
-export default NewRecipe;
+export default AddRecipe;
