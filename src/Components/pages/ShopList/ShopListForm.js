@@ -1,4 +1,5 @@
 import React, {useState, useEffect, useRef} from 'react'
+import "./ShopList.css";
 
 function ShopListForm(props) {
     const [input, setInput] = useState(props.edit ? props.edit.value : '');
@@ -24,6 +25,7 @@ function ShopListForm(props) {
     };
 
     return (
+        <div >
         <form className="todo-form" onSubmit={handleSubmit}>
             {props.edit ? (
             <>    
@@ -57,6 +59,7 @@ function ShopListForm(props) {
 
             
         </form>
+        </div>
     )
 }
 

@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import Shop from './Shop';
 import ShopListForm from './ShopListForm'
+import "./ShopList.css";
 
 
 function ShopList() {
@@ -49,7 +50,7 @@ function ShopList() {
     }
 
     return (
-        <div>
+        <div >
             <h1>Список продуктів</h1>
             <ShopListForm onSubmit={addTodo} />
             <Shop

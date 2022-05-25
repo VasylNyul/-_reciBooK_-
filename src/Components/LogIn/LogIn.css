@@ -1,15 +1,23 @@
 .LogIn {
-  top:320px;
+  position: absolute;
   text-align: center;
-  background-color:rgb(255, 255, 255);
-  margin-top: 35px;
+  color: rgb(0, 0, 0);
+  height: 40px;
+  width: 40%;
+  right: 370px;
+  padding: 65px;
+
 }
 
 .Regist {
-  top:320px;
+  position: absolute;
   text-align: center;
-  background-color:rgb(255, 254, 254);
-  margin-top: 35px;
+  color: rgb(0, 0, 0);
+  height: 40px;
+  width: 40%;
+  right: 370px;
+  padding: 55px;
+
 }
 .login-image {
   position: absolute;
@@ -47,7 +55,7 @@
   font-size: larger;
   display: block;
   padding: 10px;
-  margin: 10px auto;
+  margin: 15px auto;
   }
 
   .btn1{
@@ -57,7 +65,8 @@
     font-size: larger;
     display: block;
     padding: 10px;
-    margin: 10px auto;
+    margin: 20px auto;
+    width: fit-content;
     }
   
   .messages{

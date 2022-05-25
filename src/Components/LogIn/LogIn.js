@@ -83,7 +83,7 @@ return (
 		
 
 		<label className="label">Ел. пошта</label>
-		<input onChange={handleEmail} className="input"
+		<input placeholder="Ел. пошта" onChange={handleEmail} className="input"
 		value={email} type="email" />
 
 		<label className="label">Пароль</label>

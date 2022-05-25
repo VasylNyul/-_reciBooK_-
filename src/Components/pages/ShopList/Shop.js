@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import ShopListForm from './ShopListForm'
 import {RiCloseCircleLine} from 'react-icons/ri'
 import {TiEdit} from 'react-icons/ti'
+import "./ShopList.css";
 
 
 
