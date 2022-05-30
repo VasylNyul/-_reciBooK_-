@@ -40,7 +40,6 @@ const ShopList = () => {
 
   };
 
-
   useEffect(() => {
     axios
       .get(`http://127.0.0.1:9091/searchList.php`,{ withCredentials: true, headers: { 'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json', } })
