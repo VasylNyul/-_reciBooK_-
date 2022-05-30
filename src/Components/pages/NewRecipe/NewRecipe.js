@@ -3,6 +3,8 @@ import Navbar from './Navbar';
 import RecipeInput from './RecipeInput';
 import RecipeList from './RecipeList';
 import './NewRecipe';
+import axios from 'axios';
+
 
 class NewRecipe extends Component {
   constructor(props) {
@@ -32,6 +34,20 @@ class NewRecipe extends Component {
   onDelete(id) {
     const recipes = this.state.recipes.filter(r => r.id !== id);
     this.setState({recipes});
+    const ID = {
+      
+      id: id,
+   };
+   axios.post(`http://127.0.0.1:9091/removeRecipe.php`, { ID }, {
+     withCredentials: true,
+     headers: {
+     'Access-Control-Allow-Origin': '*',
+     'Content-Type': 'application/json',
+     }})
+     .then(res => {
+       console.log(res);
+       console.log(res.data);
+     })
   }
   
   render() {

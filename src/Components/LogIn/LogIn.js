@@ -1,12 +1,10 @@
 import React from 'react';
+import axios from 'axios';
 import { useState } from 'react';
 import {useNavigate} from 'react-router-dom';
 
-
-
-function LogIn() {
-
-let navigate = useNavigate();
+ function LogIn() {
+	let navigate = useNavigate();
 
 const [email, setEmail] = useState('');
 const [password, setPassword] = useState('');
@@ -15,21 +13,34 @@ const [password, setPassword] = useState('');
 const [submitted, setSubmitted] = useState(false);
 const [error, setError] = useState(false);
 
-// Handling the email change
 const handleEmail = (e) => {
 	setEmail(e.target.value);
 	setSubmitted(false);
-};
-
-// Handling the password change
-const handlePassword = (e) => {
+  };
+  
+  // Handling the password change
+  const handlePassword = (e) => {
 	setPassword(e.target.value);
 	setSubmitted(false);
-};
+  };
 
 // Handling the form submission
 const handleSubmit = (e) => {
 	e.preventDefault();
+
+	const customer = {
+		email: email,
+		password: password
+	  };
+	  axios.post(`http://127.0.0.1:9091/auth.php`, {
+		customer }, {
+		  withCredentials: true,
+		  headers: {
+			'Access-Control-Allow-Origin': '*',
+			'Content-Type': 'application/json',
+		  }
+		  })
+
 	if (email === '' || password === '') {
 	setError(true);
 	} else {
@@ -47,7 +58,7 @@ const successMessage = () => {
 		style={{
 		display: submitted ? '' : 'none',
 		}}>
-		<h1>Користувач {email} увійшов!!</h1>
+		<h1>Користувач увійшов!!</h1>
 	</div>
 	);
 };
@@ -66,7 +77,7 @@ const errorMessage = () => {
 };
 
 return (
-	<div className='LogIn'>
+	<div className='App'>
 	
 	<div>
 		<h3>Вхід</h3>
@@ -78,19 +89,17 @@ return (
 		{successMessage()}
 	</div>
 
-	<form>
+	<form onSubmit={handleSubmit}>
 		{/* Labels and inputs for form data */}
 		
 
 		<label className="label">Ел. пошта</label>
-		<input onChange={handleEmail} className="input"
-		value={email} type="email" />
+    	<input onChange={handleEmail} className="input"
+    	name="email" type="email" />
 
-		<label className="label">Пароль</label>
-		<input onChange={handlePassword} className="input" 
-		value={password} type="password" name='пароль'/>
-
-
+    	<label className="label">Пароль</label>
+    	<input onChange={handlePassword} className="input"
+    	name="password" type="password" />
 
 		<button onClick={handleSubmit} className="btn" type="logIn">
 		Увійти
