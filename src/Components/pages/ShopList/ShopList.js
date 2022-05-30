@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 
 import Shop from './Shop';
@@ -155,71 +154,3 @@ useEffect(
 }
 
 export default ShopList;
-=======
-import React, {useState} from 'react'
-import Shop from './Shop';
-import ShopListForm from './ShopListForm'
-import "./ShopList.css";
-
-
-function ShopList() {
-
-    const [todos, setTodos] = useState([]);
-
-    const addTodo = todo => {
-        if(!todo.text || /^\s*$/.test(todo.text)) {
-            return; 
-        }
-
-        const newTodos = [todo, ...todos]
-        setTodos(newTodos)
-    };
-
-
-
-    const updateTodo = (todoId, newValue) => {
-
-        if(!newValue.text || /^\s*$/.test(newValue.text)) {
-            return; 
-        }
-
-        setTodos(prev => prev.map(item => (item.id === todoId ? newValue : item)))
-    }
-
-
-
-    const removeTodo = id => {
-        const removeArr = [...todos].filter(todo => todo.id !== id)
-
-        setTodos(removeArr);
-    }
-
-
-    const completeTodo = id => {
-        let updatedTodos = todos.map(todo => {
-            if (todo.id === id) {
-                todo.isComplete = !todo.isComplete 
-            }
-
-            return todo;
-        })
-
-        setTodos(updatedTodos);
-    }
-
-    return (
-        <div >
-            <h1>Список продуктів</h1>
-            <ShopListForm onSubmit={addTodo} />
-            <Shop
-            todos={todos} 
-            updateTodo={updateTodo}
-            completeTodo={completeTodo} 
-            removeTodo={removeTodo} 
-            />
-        </div>
-    )
-}
-
-export default ShopList
->>>>>>> f9616922d1c734c649c0bc4681411512f0bd9a81

@@ -2,11 +2,6 @@ import React from 'react';
 import axios from 'axios';
 import { useState } from 'react';
 import {useNavigate} from 'react-router-dom';
-<<<<<<< HEAD
-=======
-import "./LogIn.css";
-
->>>>>>> f9616922d1c734c649c0bc4681411512f0bd9a81
 //import { useLocation } from "react-router";
 //import { useNavigate } from "react-router";
 

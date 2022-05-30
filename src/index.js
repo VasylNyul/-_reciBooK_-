@@ -15,7 +15,6 @@ reportWebVitals();
 
 
 
-<<<<<<< HEAD
 
 
 
@@ -39,5 +38,3 @@ reportWebVitals();
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 //reportWebVitals();
-=======
->>>>>>> f9616922d1c734c649c0bc4681411512f0bd9a81

@@ -2,18 +2,9 @@ import React from 'react';
 import axios from 'axios';
 import { useState } from 'react';
 import {useNavigate} from 'react-router-dom';
-<<<<<<< HEAD
 
  function LogIn() {
 	let navigate = useNavigate();
-=======
-import "./LogIn.css";
-
-
-function LogIn() {
-
-let navigate = useNavigate();
->>>>>>> f9616922d1c734c649c0bc4681411512f0bd9a81
 
 const [email, setEmail] = useState('');
 const [password, setPassword] = useState('');
@@ -103,18 +94,8 @@ return (
 		
 
 		<label className="label">Ел. пошта</label>
-<<<<<<< HEAD
     	<input onChange={handleEmail} className="input"
     	name="email" type="email" />
-=======
-		<input placeholder="Ел. пошта" onChange={handleEmail} className="input"
-		value={email} type="email" />
-
-		<label className="label">Пароль</label>
-		<input onChange={handlePassword} className="input" 
-		value={password} type="password" name='пароль'/>
-
->>>>>>> f9616922d1c734c649c0bc4681411512f0bd9a81
 
     	<label className="label">Пароль</label>
     	<input onChange={handlePassword} className="input"
