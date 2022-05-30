@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App'
 import reportWebVitals from './reportWebVitals';
@@ -11,14 +11,11 @@ root.render(
   </React.StrictMode>
 );
 
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
 
 
 
+<<<<<<< HEAD
 
 
 
@@ -42,3 +39,5 @@ reportWebVitals();
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 //reportWebVitals();
+=======
+>>>>>>> f9616922d1c734c649c0bc4681411512f0bd9a81

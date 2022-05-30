@@ -1,5 +1,6 @@
 * {
     margin: 0;
+<<<<<<< HEAD
     padding: 0;
     
   }
@@ -37,6 +38,23 @@ background-attachment: fixed;
  min-height: max-content ;
  min-height: 300px;
   }*/
+=======
+    padding: 65;
+  }
+
+  h1 {
+    color: #758298;
+    margin-top: 30px;
+    margin-bottom: 60px;
+  }
+
+  #main {
+    text-align: center;
+    width: 70%;
+    margin: 0 auto;
+    padding-left: 130px;
+  }
+>>>>>>> f9616922d1c734c649c0bc4681411512f0bd9a81
 
   input {
     width: 100%;
@@ -50,7 +68,11 @@ background-attachment: fixed;
   
   button {
     padding: 5px 10px;
+<<<<<<< HEAD
     /*width: 25%;*/
+=======
+    width: 25%;
+>>>>>>> f9616922d1c734c649c0bc4681411512f0bd9a81
     border-radius: 4px;
     background-color: #758298;
     color: #ffffff;
@@ -70,6 +92,11 @@ background-attachment: fixed;
     margin: 10px;
   }
   .single-meal img{
+<<<<<<< HEAD
       width: 50%;  }
 
   
+=======
+      width: 50%;
+  }
+>>>>>>> f9616922d1c734c649c0bc4681411512f0bd9a81

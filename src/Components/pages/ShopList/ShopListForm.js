@@ -1,5 +1,8 @@
 import React, {useState, useEffect, useRef} from 'react'
+<<<<<<< HEAD
 //import axios from 'axios';
+=======
+>>>>>>> f9616922d1c734c649c0bc4681411512f0bd9a81
 import "./ShopList.css";
 
 function ShopListForm(props) {
@@ -23,11 +26,18 @@ function ShopListForm(props) {
             text: input
         })
         setInput('')
+<<<<<<< HEAD
 
     };
 
    
     return (
+=======
+    };
+
+    return (
+        <div >
+>>>>>>> f9616922d1c734c649c0bc4681411512f0bd9a81
         <form className="todo-form" onSubmit={handleSubmit}>
             {props.edit ? (
             <>    
@@ -61,6 +71,10 @@ function ShopListForm(props) {
 
             
         </form>
+<<<<<<< HEAD
+=======
+        </div>
+>>>>>>> f9616922d1c734c649c0bc4681411512f0bd9a81
     )
 }
 

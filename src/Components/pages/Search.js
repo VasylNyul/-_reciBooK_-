@@ -1,7 +1,10 @@
 import React, { Component } from "react";
 import "./Search.css";
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> f9616922d1c734c649c0bc4681411512f0bd9a81
 class Search extends Component {
   state = {
     searchValue: "",

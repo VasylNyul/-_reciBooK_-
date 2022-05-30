@@ -2,9 +2,13 @@ import React, { Component } from 'react';
 import Navbar from './Navbar';
 import RecipeInput from './RecipeInput';
 import RecipeList from './RecipeList';
+<<<<<<< HEAD
 import './NewRecipe';
 import axios from 'axios';
 
+=======
+import './NewRecipe.css';
+>>>>>>> f9616922d1c734c649c0bc4681411512f0bd9a81
 
 class NewRecipe extends Component {
   constructor(props) {

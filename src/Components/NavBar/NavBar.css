@@ -99,6 +99,22 @@ flex: 30%;
     color: white;
 }
 
+.profile {
+    display: block;
+    position: absolute;
+    font-size: 30px;
+    color:rgb(37, 36, 36);
+    background-color:  #91F0C3;
+    border: none;
+    outline: none;
+    top: 22px;
+    right: 22px;
+}
+
+.profile :hover{
+    color: white;
+}
+
 .mobile-menu-icon {
     display: none;
 }

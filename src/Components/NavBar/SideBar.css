@@ -1,4 +1,5 @@
 .navbar{
+<<<<<<< HEAD
     top: 107px;
     width: 348px;
     height: 901px;
@@ -38,3 +39,44 @@
     .row #title {
         flex: 70%;
     }
+=======
+top: 107px;
+width: 348px;
+height: 901px;
+background: #EFF8F4;
+}
+
+.SidebarList{
+    height: 100%;
+    padding: 0;
+    width: 100%;
+}
+
+.SidebarList .row {
+    width: 100%;
+    height: 60px;
+    list-style-type: none;
+    margin: 0%;
+    display: flex;
+    flex-direction: row ;
+    color: #000000;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Iceland';
+}
+
+.SidebarList .row:hover {
+    cursor: pointer;
+    background-color: aquamarine;
+}
+
+.row #icon {
+    flex: 30%;
+    display: grid;
+    place-items: center;
+}
+
+.row #title {
+    flex: 70%;
+}
+>>>>>>> f9616922d1c734c649c0bc4681411512f0bd9a81
