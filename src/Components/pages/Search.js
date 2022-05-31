@@ -1,10 +1,12 @@
 import React, { Component } from "react";
 import "./Search.css";
+import axios from 'axios';
 
 class Search extends Component {
   state = {
     searchValue: "",
-    meals: []
+    meals: [],
+    recipe1: []
   };
 
   handleOnChange = event => {
@@ -12,19 +14,38 @@ class Search extends Component {
   };
 
   handleSearch = () => {
-    this.makeApiCall(this.state.searchValue);
+    //this.makeApiCall(this.state.searchValue);
+    const recipe = {
+      searchValue: this.state.searchValue,
+      meals: this.state.meals
+      };
+
+      axios.post(`http://127.0.0.1:9091/searchRecipe.php`, { recipe }, {
+      withCredentials: true,
+      headers: {
+			'Access-Control-Allow-Origin': '*',
+			'Content-Type': 'application/json',
+		  }})
+      .then(res => {
+        console.log(res);
+        console.log(res.data);
+        //const recipe1 = res.data;
+        this.setState({ recipe1: res.data });
+      })
+        
   };
 
-  makeApiCall = searchInput => {
-    var searchUrl = `https://www.themealdb.com/api/json/v1/1/search.php?s=${searchInput}`;
-    fetch(searchUrl)
-      .then(response => {
-        return response.json();
-      })
-      .then(jsonData => {
-        this.setState({ meals: jsonData.meals });
-      });
-  };
+  //makeApiCall = searchInput => {
+    
+    //var searchUrl = `https://www.themealdb.com/api/json/v1/1/search.php?s=${searchInput}`;
+    //fetch(searchUrl)
+     // .then(response => {
+     //   return response.json();
+     // })
+     // .then(jsonData => {
+     //   this.setState({ meals: jsonData.meals });
+      //});
+  //};
 
   render() {
     return (

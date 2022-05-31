@@ -5,6 +5,7 @@ import 'primeicons/primeicons.css';
 import { FaBookOpen, FaShoppingCart,FaRegCalendarAlt } from 'react-icons/fa';
 import { IoMdSearch, IoMdAdd } from 'react-icons/io'; 
 import {CgProfile} from "react-icons/cg";
+import {GiHamburgerMenu} from "react-icons/gi";
 import {handleSubmit, setSubmitted} from "../LogIn/Register";
 import Regist from '../LogIn/Register';
 
@@ -57,7 +58,7 @@ const NavBar = () => {
             >
                 {isMobile ? (<i className='pi pi-times'></i> )
                 :
-                ( <i className='pi-align-right'></i>)
+                ( <GiHamburgerMenu/>)
                 }
             </button>
 

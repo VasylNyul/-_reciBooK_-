@@ -1,6 +1,8 @@
 import React from 'react';
 import { useState } from 'react';
 import "./EditProfile.css";
+import axios from 'axios';
+
  function Edit() {
 
 
@@ -25,6 +27,18 @@ const handlefavoriteFood = (e) => {
 // Handling the form submission
 const handleSubmit = (e) => {
 	e.preventDefault();
+    const edit = {
+		short_bio: shortbio,
+        fFood: favoriteFood
+	  };
+	  axios.post(`http://127.0.0.1:9091/EditProfile.php`, {
+		edit }, {
+		  withCredentials: true,
+		  headers: {
+			'Access-Control-Allow-Origin': '*',
+			'Content-Type': 'application/json',
+		  }
+		  })
 	setSubmitted(true);
 
 	

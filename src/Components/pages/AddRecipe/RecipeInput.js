@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import './RecipeInput.css';
+import axios from 'axios';
 
 class RecipeInput extends Component {
   static defaultProps = {
@@ -48,6 +49,23 @@ class RecipeInput extends Component {
       ingredients: [''],
       img: ''
     })
+    const Recipe1 = {
+       title: this.state.title,
+       instructions: this.state.instructions,
+       ingredients: this.state.ingredients,
+       img:  this.state.img
+    };
+    axios.post(`http://127.0.0.1:9091/NewRecipe.php`, { Recipe1 }, {
+      withCredentials: true,
+      headers: {
+			'Access-Control-Allow-Origin': '*',
+			'Content-Type': 'application/json',
+		  }})
+      .then(res => {
+        console.log(res);
+        console.log(res.data);
+      })
+
   }
   
   render() {
@@ -77,7 +95,8 @@ class RecipeInput extends Component {
           <button
             type="button"
             className="close-button"
-            onClick={onClose}>
+            onClick={onClose}
+          >
             X
           </button>
           <div className='recipe-form-line'>
