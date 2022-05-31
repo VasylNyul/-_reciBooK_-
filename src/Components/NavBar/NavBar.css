@@ -87,7 +87,8 @@ flex: 30%;
     flex: 70%;
 }
 
-.login{
+.login,
+.logout{
     text-decoration: none;
     color: rgb(37, 36, 36);
     font-size: 25px;
@@ -146,7 +147,8 @@ flex: 30%;
         height: 100%;
     }
 
-    .login{
+    .login,
+    .logout{
         text-decoration: none;
         color: rgb(37, 36, 36);
         font-size: 20px;

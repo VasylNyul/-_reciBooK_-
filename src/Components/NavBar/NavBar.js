@@ -6,12 +6,14 @@ import { FaBookOpen, FaShoppingCart,FaRegCalendarAlt } from 'react-icons/fa';
 import { IoMdSearch, IoMdAdd } from 'react-icons/io'; 
 import {CgProfile} from "react-icons/cg";
 import {GiHamburgerMenu} from "react-icons/gi";
+import {BiLogIn, BiLogOut} from "react-icons/bi";
 import {handleSubmit, setSubmitted} from "../LogIn/Register";
 import Regist from '../LogIn/Register';
 
 
 const NavBar = () => {
     const [isMobile, setIsMobile] = useState(false); 
+    const [isLogIn, setIsLogIn] = useState(false);
    
   return (
     <div>
@@ -21,12 +23,16 @@ const NavBar = () => {
                
                   
                
-                    <Link to='/login' className='login'>
+                <Link to='/login' className='login'>
                 <li>Вхід</li>
+                </Link>
+                <Link to='/logout' className='logout'>
+                <li>Вихід</li>
                 </Link>
                 <Link to='/profile' className='profile'>
                   <CgProfile/>
-                  </Link>  
+                </Link> 
+            
            
 
             <ul className={isMobile ? 'nav-links-mobile' : 'nav-links-web'}
@@ -68,3 +74,12 @@ const NavBar = () => {
 }
 
 export default NavBar;
+/*
+<button className='mobile-menu-icon'
+onClick={() => setIsLogIn(!isLogIn)}
+>
+    {isLogIn ? (<BiLogOut/> )
+    :
+    ( <BiLogIn/>)
+    }
+</button> */
