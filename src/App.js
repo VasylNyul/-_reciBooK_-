@@ -13,6 +13,7 @@ import Edit from './Components/EditProfile/EditProfile';
 //import RecipeList from './Components/pages/NewRecipe/RecipeList';
 import Profile from './Components/EditProfile/Profile';
 import Calendar from './Components/pages/Calendar';
+import LogOut from './Components/LogIn/LogOut';
 //import MyRecipes from './Components/pages/MyRecipes/MyRecipes';
 
 const App = () => {
@@ -27,6 +28,7 @@ const App = () => {
       <Route  path = "/search" element = {<Search/>} />
       <Route  path = "/calendar" element = {<Calendar/>} />
      
+      <Route  path = "/logout" element = {<LogOut/>} />
       <Route  path = "/login" element = {<LogIn/>} />
       <Route  path = "/regist" element = {<Regist/>} />
       <Route  path = "/profile" element = {<Profile/>} />
