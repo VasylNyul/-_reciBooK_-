@@ -1,33 +1,25 @@
 <?php
     require_once 'connect.php';
-    $request_body = file_get_contents('php://input');
-    $data = json_decode($request_body, true);
-    $data = $data['recipe'];
-    var_dump($data);
 
-    $recipe_name = $data['searchValue'];
-    $meals = $data['meals'];
-
-    $ingredients = json_encode($meals);
+    $customer_id = $_SESSION['customer_id'];
     
-    $result = $mysql->query("SELECT * FROM `recipe` WHERE `recipe_name` = '$recipe_name' OR `ingredients` = '$ingredients' ");
-    $recipe = $result->fetch_assoc();
+    $result = $mysql->query("SELECT * FROM `recipe` WHERE `customer_id` = '$customer_id'");
+    //$recipe = $result->fetch_assoc();
     
-    if($recipe)
+    $recipe_arr = array();
+    while($recipe = $result->fetch_assoc())
     {
         $recipe_name1 = $recipe['recipe_name'];
         $instruction = $recipe['instruction'];
         $photo = $recipe['photo'];
         $ingred = json_decode($recipe['ingredients']);
-        die(json_encode(['recipe_name' => $recipe_name1,
+        $list_arr[$recipe['recipe_id']] = ['recipe_name' => $recipe_name1,
                          'ingredients' => $ingred,
                          'instruction' => $instruction,
-                         'photo' => $photo
-                        ]));
+                         'photo' => $photo];
     }
-    else{
-        die("Такого рецепту не знайдено");
-    }
+    //var_dump($list_arr);
+    die(json_encode($list_arr));
     $mysql->close();
     
     exit();

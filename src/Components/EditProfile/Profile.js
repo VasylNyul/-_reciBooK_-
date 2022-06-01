@@ -1,157 +1,49 @@
-import "./styles.css";
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
-//import Typography from "@material-ui/core/Typography";
-import Button from "@material-ui/core/Button";
-import IconButton from "@material-ui/core/IconButton";
-//import { Radio } from '@material-ui/core';
+import { useState } from "react";
+import axios from "axios";
+import { useNavigate } from "react-router-dom"; 
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1
-  },
-  bar: {
-    backgroundColor: "#2160A0"
-  },
-  menuButton: {
-    marginRight: theme.spacing(2)
-  },
-  title: {
-    flexGrow: 1
-  },
-  HeaderButton: {
-    margin: "0 2% 0 2%"
-  },
-  formStyles: {
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    flexDirection: "column",
-    margin: "3%"
-  },
-  imgStyles: {
-    width: "35%",
-    marginLeft: "2.5%",
-    borderRadius: "150px"
-  },
-  formInputs: {
-    display: "flex",
-    flexDirection: "column",
-    textAlign: "center",
-    justifyContent: "center",
-    alignItems: "center",
-    width: "60%",
-    marginBottom: "2%"
-  },
-  input: {
-    margin: "5%",
-    marginRight: "50%",
-    padding: "3%",
-    borderRadius: "10px",
-    fontSize: "1.25rem"
-  },
-  input2: {
-    margin: "5%",
-    padding: "5%",
-    borderRadius: "10px",
-    fontSize: "1.25rem",
-    marginLeft: "5%"
-  },
-  formRadios: {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    textAlign: "center",
-    marginLeft: "80%"
-  },
-  textStylingRadios: {
-    padding: "0",
-    margin: "3%",
-    marginLeft: "100%",
-    width: "100%",
-    color: "rgb(0, 0, 0, 60%)",
-    textAlign: "center"
-  },
-  textStylingInputs: {
-    padding: "0",
-    margin: "1%",
-    marginLeft: "15%",
-    color: "rgb(0, 0, 0, 60%)",
-    textAlign: "center"
-  }
-}));
+import "./EditProfile.css";
 
-export default function Profile() {
-  const classes = useStyles();
-
+function Profile() {
+  const [UserList, setUserList] = useState([]);
+    
+  let navigate = useNavigate();
+    
+const getUser = () => {
+  axios.get(`http://127.0.0.1:9091/profile.php`, { withCredentials: true, headers: { 'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json', } })
+  .then((response) => {
+   setUserList(response.data);
+  });
+};
+    
   return (
-    <div className={classes.root}>
-      <AppBar className={classes.bar} position="static">
-        <Toolbar>
-          <IconButton
-            edge="start"
-            className={classes.menuButton}
-            color="inherit"
-            aria-label="menu"
-          ></IconButton>
-          <Button className={classes.HeaderButton} color="inherit">
-            Profile
-          </Button>
-        </Toolbar>
-      </AppBar>
-      <section className="profile-page">
-        <form className={classes.formStyles}>
-          <div id="aviurl" className={classes.formInputs}>
-            <img
-              src="https://harchi.info/files/1356-kosher-food.jpg"
-              alt=""
-              className={classes.imgStyles}
-            />
-            {/* <input name='aviurl' type='file' /> */}
-          </div>
-          <div className={classes.formInputs}>
-            <label>
-              <p className={classes.textStylingInputs}>Full name</p>
-              <input name="name" type="text" className={classes.input} />
-            </label>
-            <label>
-              <p className={classes.textStylingInputs}>Email</p>
-              <input name="email" type="email" className={classes.input} />
-            </label>
-            <label>
-              <p className={classes.textStylingInputs}>Location</p>
-              <input
-                name="location"
-                type="text"
-                placeholder="City, State"
-                className={classes.input2}
-              />
-            </label>
-            <label>
-              <p className={classes.textStylingInputs}>Bio</p>
-              <textarea name="bio" className={classes.input2} />
-            </label>
-            <div>
-              <label className={classes.formInputs}>
-                <p className={classes.textStylingRadios}> </p>
-                <div className={classes.formRadios}>
-                  <label>
-                    <p className={classes.textStylingInputs}>Favourite Food</p>
-                    <textarea
-                      name="Favourite Food"
-                      className={classes.input2}
-                    />
-                  </label>
-                </div>
-
-                <p className={classes.textStylingRadios}></p>
-              </label>
-            </div>
-          </div>
-        </form>
-      </section>
+   <div className="UserInform">
+   
+   {UserList.map((val, key) => {
+          
+      <div className="User">
+      <div>
+      <h2>Дані користувача</h2>
+      <h3>Прізвище: {val.first_name}</h3>
+      <h3>Ім'я: {val.last_name}</h3>
+      <h3>Дата народження: {val.birth}</h3>
+      <h3>Email: {val.email}</h3>
+      <h3>Password: {val.password}</h3>
+      <h3>Short Bio: {val.shortbio}</h3>
+      <h3>Улюблені страви: {val.favoriteFood}</h3>
+      </div>
+               
+      </div>
+    
+   })}
+   <button  onClick={() => {
+            navigate ("/edit") ;
+        }} className="btn1">
+    Редагувати
+    </button>
     </div>
-  );
-}
+    );
+  }
+ export default Profile;
+

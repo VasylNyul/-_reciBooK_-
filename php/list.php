@@ -9,7 +9,6 @@
     $product = $data['text'];
     //var_dump($_SESSION);
     $customer_id = $_SESSION['customer_id'];
-
     //$customer_id = mysqli_select_id($mysql);
     //$customer_id = mysql->query("SELECT customer_id FROM `customer`")
     $result1 = $mysql->query("INSERT INTO `list` ( `product`, `customer_id` )

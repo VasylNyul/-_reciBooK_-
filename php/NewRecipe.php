@@ -24,8 +24,11 @@ $ingredients = $data['ingredients'];
 $photo = $data['img'];
 $customer_id = $_SESSION['customer_id'];
 
-$ingr = json_encode($ingredients);
+//var_dump($request_body);
+//exit();
 
+$ingr = json_encode($ingredients, JSON_UNESCAPED_UNICODE);
+//var_dump($ingr);
 $mysql->query("INSERT INTO `recipe`( `recipe_name`, `photo`, `ingredients`, `instruction`, `customer_id`) 
 VALUES ('$recipe_name','$photo','$ingr','$instructions', '$customer_id')");
 

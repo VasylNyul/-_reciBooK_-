@@ -45,3 +45,27 @@
     height: 50px;
     padding: 5px;
     }
+
+    .UserInform{
+        position: absolute;
+        display: block;
+        list-style: none;
+        background-color: #eff8f4;
+        left: 80;
+        right: 0;
+        top: 75px;
+        transition: all 0.5s ease-out;
+        width: 20%;
+        height: 50%;
+    }
+    
+    .btn1{
+    color: rgb(72, 139, 36);
+    background-color: rgb(154, 215, 153);
+    border-radius: 5px;
+    font-size: larger;
+    display: block;
+    padding: 10px;
+    margin: 20px auto;
+    width: fit-content;
+    }

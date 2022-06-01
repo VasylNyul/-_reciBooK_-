@@ -1,6 +1,5 @@
 import React from 'react'
 import './App.css';
-//import './Components/LogIn/LogIn.css'
 import LogIn from './Components/LogIn/LogIn';
 import Regist from './Components/LogIn/Register';
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
@@ -12,16 +11,17 @@ import Search from './Components/pages/Search';
 import ShopList from './Components/pages/ShopList/ShopList';
 import Edit from './Components/EditProfile/EditProfile';
 //import RecipeList from './Components/pages/NewRecipe/RecipeList';
-//import Profile from './Components/EditProfile/Profile';
+import Profile from './Components/EditProfile/Profile';
 import Calendar from './Components/pages/Calendar';
+//import MyRecipes from './Components/pages/MyRecipes/MyRecipes';
 
 const App = () => {
   return (
     <Router>
     <NavBar/>
 
-  <Routes>
-      <Route  path = "/" element = {<NewRecipe/>} />
+     <Routes>
+      <Route  path = "/" element = {<Home/>} />
       <Route  path = "/newrecipe" element = {<AddRecipe/>} />
       <Route  path = "/shoplist" element = {<ShopList/>} />
       <Route  path = "/search" element = {<Search/>} />
@@ -29,15 +29,13 @@ const App = () => {
      
       <Route  path = "/login" element = {<LogIn/>} />
       <Route  path = "/regist" element = {<Regist/>} />
-      <Route  path = "/profile" element = {<Edit/>} />
+      <Route  path = "/profile" element = {<Profile/>} />
+      <Route  path = "/edit" element = {<Edit/>} />
 
-  </Routes>
-</Router> 
-
-  
-
+     </Routes>
+    </Router> 
 
   );
 }
 
- export default App;
+export default App;
