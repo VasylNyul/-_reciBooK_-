@@ -5,7 +5,7 @@
 $request_body = file_get_contents('php://input');
 $data = json_decode($request_body, true);
 $data = $data['customer'];
-//var_dump($data);
+
 if (!isset($data['first_name'])) {
   die('Enter first_name');
 }

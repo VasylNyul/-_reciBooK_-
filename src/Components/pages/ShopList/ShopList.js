@@ -31,12 +31,17 @@ const ShopList = () => {
     })
 
       //const data = await axios.get(`http://127.0.0.1:9091/list.php`).then(res => res.data);
-      .then(res => {
-        console.log(res);
-        console.log(res.data);
-        //setList_Id(res.data);
-      })
-
+      /*.then((res) => {
+        const data = res.data;
+        const todos = Object.keys(res.data).map(key => {
+          const product = data[key];
+          return {
+            id: key,
+            text:product,
+          };
+        });
+        setTodos(todos);
+      })*/
 
   };
 
@@ -114,7 +119,7 @@ useEffect(
 
     setTodos(removeArr);
     const removelist = {
-      id: id
+      id: id,
     };
 
     axios.post(`http://127.0.0.1:9091/removelist.php`, {

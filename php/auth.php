@@ -4,7 +4,7 @@ require_once 'connect.php';
 $request_body = file_get_contents('php://input');
 $data = json_decode($request_body, true);
 $data = $data['customer'];
-//var_dump($data);
+
 if (!isset($data['email'])) {
     die('Enter email');
 }
@@ -23,7 +23,6 @@ if (!$customer) {
     print("Такого користувача не знайдено");
 } else {
     $_SESSION['customer_id'] = $customer['customer_id'];
-    //var_dump($_SESSION);
     $result_response = json_encode($customer);
     setcookie('customer', $customer['first_name'], time() + 3600 * 24, "/");
     print("Успішна авторизація");
