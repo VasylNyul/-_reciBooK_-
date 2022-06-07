@@ -6,8 +6,30 @@ class Search extends Component {
   state = {
     searchValue: "",
     meals: [],
-    recipe1: []
+    recipe1: [],
+    recipes: []
   };
+
+
+  componentDidMount() {
+    axios.get(`http://127.0.0.1:9091/searchRecipe.php`,
+      {
+        withCredentials: true, headers:
+        {
+          'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json',
+        }
+      }).then(res => {
+        console.log('res.data', res.data);
+        const meals = Object.keys(res.data).map(id => {
+          const meal = res.data[id];
+          //meal.ingredients = JSON.parse(meal.ingredients);
+          return meal;
+        });
+        console.log(meals);
+        this.setState({ meals });
+        
+      })
+  }
 
   handleOnChange = event => {
     this.setState({ searchValue: event.target.value });
@@ -18,36 +40,38 @@ class Search extends Component {
     const recipe = {
       searchValue: this.state.searchValue,
       meals: this.state.meals
-      };
+    };
 
-      axios.post(`http://127.0.0.1:9091/searchRecipe.php`, { recipe }, {
+    axios.post(`http://127.0.0.1:9091/searchRecipe.php`, { recipe }, {
       withCredentials: true,
       headers: {
-			'Access-Control-Allow-Origin': '*',
-			'Content-Type': 'application/json',
-		  }})
+        'Access-Control-Allow-Origin': '*',
+        'Content-Type': 'application/json',
+      }
+    })
       .then(res => {
         console.log(res);
         console.log(res.data);
         //const recipe1 = res.data;
         this.setState({ recipe1: res.data });
       })
-        
+
   };
 
   //makeApiCall = searchInput => {
-    
-    //var searchUrl = `https://www.themealdb.com/api/json/v1/1/search.php?s=${searchInput}`;
-    //fetch(searchUrl)
-     // .then(response => {
-     //   return response.json();
-     // })
-     // .then(jsonData => {
-     //   this.setState({ meals: jsonData.meals });
-      //});
+
+  //var searchUrl = `https://www.themealdb.com/api/json/v1/1/search.php?s=${searchInput}`;
+  //fetch(searchUrl)
+  // .then(response => {
+  //   return response.json();
+  // })
+  // .then(jsonData => {
+  //   this.setState({ meals: jsonData.meals });
+  //});
   //};
 
   render() {
+    console.log('last meal', this.state.meals[this.state.meals.length - 1]?.photo);
     return (
       <div id="main">
         <h1>Пошук рецепту</h1>
@@ -61,12 +85,16 @@ class Search extends Component {
         <button onClick={this.handleSearch}>Шукати</button>
         {this.state.meals ? (
           <div id="meals-container">
-            {this.state.meals.map((meal, index) => (
-              <div class="single-meal" key={index}>
-                <h2>{meal.strMeal}</h2>
-                <img src={meal.strMealThumb} alt="meal-thumbnail" />
-              </div>
-            ))}
+           {this.state.meals.filter(meal => {
+      return meal.recipe_name.toLowerCase().includes(this.state.searchValue.toLowerCase());
+    }).map((meal, index) => (
+      <div class="single-meal" key={index}>
+        <h2>{meal.strMeal || meal.recipe_name}</h2> 
+        {meal.instruction}
+        {meal.ingredients.map(ingredient => <div>{ingredient}</div>)}
+        { <img src={meal.strMealThumb || meal.photo} alt="meal-thumbnail" /> }
+      </div>
+    ))}
           </div>
         ) : (
           <p>За цим запитом не знайдено рецепту</p>

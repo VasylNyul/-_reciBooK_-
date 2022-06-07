@@ -3,8 +3,7 @@ import ShopListForm from './ShopListForm'
 import {RiCloseCircleLine} from 'react-icons/ri'
 import {TiEdit} from 'react-icons/ti'
 import "./ShopList.css";
-
-
+//import axios from 'axios';
 
 function Shop({todos, completeTodo, removeTodo, updateTodo}) {
 
@@ -12,13 +11,15 @@ function Shop({todos, completeTodo, removeTodo, updateTodo}) {
         id: null,
         value: ''
     });
-
+    
+    
     const submitUpdate = value => {
         updateTodo(edit.id, value)
         setEdit({
             id: null,
             value: ''
         }) 
+       
     }
 
 
@@ -26,7 +27,7 @@ function Shop({todos, completeTodo, removeTodo, updateTodo}) {
         return <ShopListForm edit={edit} onSubmit={submitUpdate} />
     }
 
-
+console.log(todos)
 
     return todos.map((todo, index) => (
         <div 
@@ -34,7 +35,7 @@ function Shop({todos, completeTodo, removeTodo, updateTodo}) {
             key={index}> 
 
             <div key={todo.id} onClick={() => completeTodo(todo.id)}>
-                {todo.text}
+                {todo.text }
             </div>
 
             <div className="icons">

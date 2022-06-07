@@ -26,22 +26,22 @@ const NavBar = () => {
                 <Link to='/login' className='login'>
                 <li>Вхід</li>
                 </Link>
-                <Link to='/logout' className='logout'>
-                <li>Вихід</li>
-                </Link>
+                
                 <Link to='/profile' className='profile'>
                   <CgProfile/>
                 </Link> 
-            
+                <Link to='/logout' className='logout'>
+                <BiLogOut/>
+                </Link>
            
 
             <ul className={isMobile ? 'nav-links-mobile' : 'nav-links-web'}
             onClick={()=> setIsMobile(false)}>
-                <Link to='/' className='home'>
+                <Link to='/home' className='home'>
                 <li> <FaBookOpen/>  Мої рецепти</li>
                 </Link>
 
-                <Link to='/search' className='search'>
+                <Link to='/' className='search'>
                 <li> <IoMdSearch/>  Пошук</li>
                 </Link>
 
