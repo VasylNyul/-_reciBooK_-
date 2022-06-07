@@ -6,6 +6,7 @@
     $result = $mysql->query("SELECT * FROM `customer` WHERE `customer_id` = '$customer_id'");
     $customer = $result->fetch_assoc();
      
+    
     if($customer)
     {
         $first_name = $customer['first_name'];
