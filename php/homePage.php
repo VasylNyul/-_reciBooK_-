@@ -1,6 +1,9 @@
 <?php
     require_once 'connect.php';
-
+    
+    if(!isset($_SESSION['customer_id'])){
+        exit();
+    }
     $customer_id = $_SESSION['customer_id'];
     
     $result = $mysql->query("SELECT * FROM `recipe` WHERE `customer_id` = '$customer_id'");

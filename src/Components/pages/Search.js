@@ -10,7 +10,6 @@ class Search extends Component {
     recipes: []
   };
 
-
   componentDidMount() {
     axios.get(`http://127.0.0.1:9091/searchRecipe.php`,
       {
@@ -22,8 +21,7 @@ class Search extends Component {
         console.log('res.data', res.data);
         const meals = Object.keys(res.data).map(id => {
           const meal = res.data[id];
-          //meal.ingredients = JSON.parse(meal.ingredients);
-          return meal;
+           return meal;
         });
         console.log(meals);
         this.setState({ meals });
@@ -36,7 +34,6 @@ class Search extends Component {
   };
 
   handleSearch = () => {
-    //this.makeApiCall(this.state.searchValue);
     const recipe = {
       searchValue: this.state.searchValue,
       meals: this.state.meals
@@ -58,17 +55,7 @@ class Search extends Component {
 
   };
 
-  //makeApiCall = searchInput => {
-
-  //var searchUrl = `https://www.themealdb.com/api/json/v1/1/search.php?s=${searchInput}`;
-  //fetch(searchUrl)
-  // .then(response => {
-  //   return response.json();
-  // })
-  // .then(jsonData => {
-  //   this.setState({ meals: jsonData.meals });
-  //});
-  //};
+  
 
   render() {
     console.log('last meal', this.state.meals[this.state.meals.length - 1]?.photo);
@@ -78,11 +65,11 @@ class Search extends Component {
         <input
           name="text"
           type="text"
-          placeholder="Введіть назву або інгредієнт..."
+          placeholder="Введіть назву рецепту..."
           onChange={event => this.handleOnChange(event)}
           value={this.state.searchValue}
         />
-        <button onClick={this.handleSearch}>Шукати</button>
+        
         {this.state.meals ? (
           <div id="meals-container">
            {this.state.meals.filter(meal => {
@@ -90,9 +77,9 @@ class Search extends Component {
     }).map((meal, index) => (
       <div class="single-meal" key={index}>
         <h2>{meal.strMeal || meal.recipe_name}</h2> 
-        {meal.instruction}
-        {meal.ingredients.map(ingredient => <div>{ingredient}</div>)}
         { <img src={meal.strMealThumb || meal.photo} alt="meal-thumbnail" /> }
+        {meal.ingredients.map(ingredient => <div>{ingredient}</div>)}
+         {meal.instruction}
       </div>
     ))}
           </div>
