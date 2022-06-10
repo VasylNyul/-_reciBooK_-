@@ -157,7 +157,7 @@ flex: 30%;
         top: 75px;
         transition: all 0.5s ease-out;
         width: 50%;
-        height: 100%;
+        height: 600px;
     }
 
     /*.login{
@@ -172,7 +172,6 @@ flex: 30%;
     .home,
     .search,
     .shoplist,
-    .calendar,
     .newrecipe,
     .logout{
         color: rgb(37, 36, 36);
@@ -203,3 +202,4 @@ flex: 30%;
       
 
 }
+

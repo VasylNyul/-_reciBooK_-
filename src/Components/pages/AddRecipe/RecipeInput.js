@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import './RecipeInput.css';
 import axios from 'axios';
+import{Button} from "react-bootstrap";
+import"bootstrap/dist/css/bootstrap.css";
 
 class RecipeInput extends Component {
   static defaultProps = {
@@ -97,7 +99,7 @@ class RecipeInput extends Component {
             className="close-button"
             onClick={onClose}
           >
-            X
+            
           </button>
           <div className='recipe-form-line'>
             <label htmlFor='recipe-title-input'>Назва рецепту:</label>
@@ -147,13 +149,12 @@ class RecipeInput extends Component {
               autoComplete='off'
               onChange={this.handleChange} />
           </div>
-          <button
-            type="submit"
+          <Button 
+          type="submit"
             className="buttons"
-            style={{alignSelf: 'flex-end', marginRight: 0}}
-          >
+            style={{alignSelf: 'flex-end', marginRight: 0}}>
             Зберегти
-          </button>
+            </Button>
         </form>
       </div>
     )
