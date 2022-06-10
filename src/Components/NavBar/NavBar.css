@@ -50,7 +50,8 @@ background: #eff8f4;
 .search,
 .shoplist,
 .calendar,
-.newrecipe{
+.newrecipe,
+.logout{
     text-decoration: none;
     color: rgb(37, 36, 36);
     font-size: 23px;
@@ -86,16 +87,17 @@ flex: 30%;
 .title {
     flex: 70%;
 }
-
+/*
 .login{
     text-decoration: none;
     color: rgb(37, 36, 36);
-    font-size: 25px;
+    font-size: 30px;
     padding: 10px 40px;
     margin: 0 10px;
     cursor: pointer;
     
-}
+}*/
+
 .login :hover {
     color: white;
 }
@@ -111,7 +113,7 @@ flex: 30%;
     top: 22px;
     right: 45px;
 }
-.logout {
+.login {
     display: block;
     position: absolute;
     font-size: 30px;
@@ -158,7 +160,7 @@ flex: 30%;
         height: 100%;
     }
 
-    .login{
+    /*.login{
         text-decoration: none;
         color: rgb(37, 36, 36);
         font-size: 20px;
@@ -166,12 +168,13 @@ flex: 30%;
         margin: 0 10px;
         right: 45px;
         cursor: pointer;
-    }
+    }*/
     .home,
     .search,
     .shoplist,
     .calendar,
-    .newrecipe{
+    .newrecipe,
+    .logout{
         color: rgb(37, 36, 36);
         padding: 32px;
         width: 100%;
