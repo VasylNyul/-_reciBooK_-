@@ -2,6 +2,9 @@ import React from 'react';
 import axios from 'axios';
 import { useState } from 'react';
 import {useNavigate} from 'react-router-dom';
+import './LogIn.css'
+
+
 
  function LogIn() {
 	let navigate = useNavigate();
@@ -77,10 +80,10 @@ const errorMessage = () => {
 };
 
 return (
-	<div className='App'>
+	<div className='LogIn'>
 	
-	<div>
-		<h3>Вхід</h3>
+	<div className='hid'>
+		<h2>Вхід</h2>
 	</div>
 
 	{/* Calling to the methods */}
@@ -110,6 +113,7 @@ return (
         }} className="btn1">
 		Зареєструватись
 		</button>
+
 		
 		
 	</form>

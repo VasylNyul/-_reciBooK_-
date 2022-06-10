@@ -2,18 +2,16 @@ import React, {useState} from 'react'
 import { Link } from 'react-router-dom';
 import "./NavBar.css";
 import 'primeicons/primeicons.css';
-import { FaBookOpen, FaShoppingCart,FaRegCalendarAlt } from 'react-icons/fa';
+import { FaBookOpen, FaShoppingCart } from 'react-icons/fa';
 import { IoMdSearch, IoMdAdd } from 'react-icons/io'; 
 import {CgProfile} from "react-icons/cg";
 import {GiHamburgerMenu} from "react-icons/gi";
 import {BiLogIn, BiLogOut} from "react-icons/bi";
-import {handleSubmit, setSubmitted} from "../LogIn/Register";
-import Regist from '../LogIn/Register';
 
 
 const NavBar = () => {
     const [isMobile, setIsMobile] = useState(false); 
-    const [isLogIn, setIsLogIn] = useState(false);
+   
    
   return (
     <div>
@@ -53,9 +51,6 @@ const NavBar = () => {
                 <li> <FaShoppingCart/>  Список покупок</li>
                 </Link>
 
-                <Link to='/calendar' className='calendar'>
-                <li> <FaRegCalendarAlt/>  Календар харчування</li>
-                </Link>
 
                 </ul>
             </ul>
@@ -74,12 +69,3 @@ const NavBar = () => {
 }
 
 export default NavBar;
-/*
-<button className='mobile-menu-icon'
-onClick={() => setIsLogIn(!isLogIn)}
->
-    {isLogIn ? (<BiLogOut/> )
-    :
-    ( <BiLogIn/>)
-    }
-</button> */

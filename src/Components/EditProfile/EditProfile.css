@@ -9,6 +9,8 @@
     transition: all 0.5s ease-out;
     width: 20%;
     height: 50%;
+    background-image: linear-gradient(to bottom right, rgba(86,90,168, 0.7), rgba(172,174,211,0.7)), url(./search.png);
+  
 }
 
 .User{
@@ -76,4 +78,19 @@ width: fit-content;
     }
     
    
-  
+    @media screen and (max-width: 940px){
+        .UserInform{
+            position: absolute;
+            display: block;
+            list-style: none;
+            background-color: #eff8f4;
+            left: 80;
+            right: 0;
+            top: 75px;
+            transition: all 0.5s ease-out;
+            width: 50%;
+            height: 50%;
+            background-image: linear-gradient(to bottom right, rgba(187, 188, 203, 0.7), rgba(221, 222, 237, 0.7)), url(./search.png);
+          
+        }
+    }

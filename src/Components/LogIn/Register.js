@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import { useState } from 'react';
 import {useNavigate} from 'react-router-dom';
+import './LogIn.css'
 //import { useLocation } from "react-router";
 //import { useNavigate } from "react-router";
 
@@ -85,18 +86,6 @@ const handleSubmit = (e) => {
   }  
 };
 
-// Showing success message
-/* const successMessage = () => {
-  return (
-  <div
-    className="success"
-    style={{
-    display: submitted ? '' : 'none',
-    }}>
-    <h1>Користувача {name} зареєстровано!!</h1>
-  </div>
-  );
-};*/
 
 // Showing error message if error is true
 const errorMessage = () => {
@@ -113,22 +102,21 @@ const errorMessage = () => {
 
 return (
   
-  <div className='App'>
-  <div>
-    <h3>Реєстрація</h3>
+  <div className='Regist'>
+  <div className='hid'>
+    <h2>Реєстрація</h2>
   </div>
 
   {/* Calling to the methods */}
+
   <div className="messages">
     {errorMessage()}
-    
   </div>
 
   <form onSubmit={handleSubmit}>
+
     {/* Labels and inputs for form data */}
     
-
-
     <label className="label">Ім'я</label>
     <input onChange={handleFirstName} className="input"
     name="first_name" type="text" />

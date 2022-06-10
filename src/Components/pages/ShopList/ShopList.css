@@ -1,8 +1,8 @@
 body {
   background-size: 100% 100%;
   background-repeat: no-repeat;
-background-image: linear-gradient(to bottom right, rgba(86,90,168, 0.7), rgba(172,174,211,0.7)), url(./imagine.png);
-background-attachment: fixed;
+  background-image: linear-gradient(to bottom right, rgba(86,90,168, 0.7), rgba(172,174,211,0.7)), url(./imagine.png);
+  background-attachment: fixed;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -42,6 +42,7 @@ h1 {
 
 .todo-form {
   margin-bottom: 32px;
+  left: 300px;
 }
 
 .todo-input {
