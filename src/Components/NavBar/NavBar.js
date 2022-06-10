@@ -21,17 +21,14 @@ const NavBar = () => {
                
                   
                
-                <Link to='/login' className='login'>
-                <li>Вхід</li>
-                </Link>
+                
                 
                 <Link to='/profile' className='profile'>
                   <CgProfile/>
-                </Link> 
-                <Link to='/logout' className='logout'>
-                <BiLogOut/>
                 </Link>
-           
+                <Link to='/login' className='login'>
+                <BiLogIn/>
+                </Link>
 
             <ul className={isMobile ? 'nav-links-mobile' : 'nav-links-web'}
             onClick={()=> setIsMobile(false)}>
@@ -49,6 +46,10 @@ const NavBar = () => {
 
                 <Link to='/shoplist' className='shoplist'>
                 <li> <FaShoppingCart/>  Список покупок</li>
+                </Link>
+                 
+                <Link to='/logout' className='logout'>
+                <li> <BiLogOut/>  Вихід </li>
                 </Link>
 
 
