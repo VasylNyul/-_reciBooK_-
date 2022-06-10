@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./Search.css";
 import axios from 'axios';
- import"bootstrap/dist/css/bootstrap.css";
+//  import"bootstrap/dist/css/bootstrap.css";
 
 class Search extends Component {
   state = {
