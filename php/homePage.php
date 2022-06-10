@@ -1,8 +1,12 @@
 <?php
     require_once 'connect.php';
-
     
-    $result = $mysql->query("SELECT * FROM `recipe`");
+    if(!isset($_SESSION['customer_id'])){
+        exit();
+    }
+    $customer_id = $_SESSION['customer_id'];
+    
+    $result = $mysql->query("SELECT * FROM `recipe` WHERE `customer_id` = '$customer_id'");
     //$recipe = $result->fetch_assoc();
     
     $recipe_arr = array();

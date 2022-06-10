@@ -4,5 +4,7 @@
     width: 80%;
     left: 300px;
     padding: 20px;
+    background-image: linear-gradient(to bottom right, rgba(86,90,168, 0.7), rgba(172,174,211,0.7)), url(./search.png);
+  
   
 }

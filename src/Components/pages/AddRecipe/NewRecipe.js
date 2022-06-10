@@ -29,7 +29,6 @@ class AddRecipe extends Component {
   
   
   render() {
-    const {showForm} = this.state;
     return (
       <div className="newRecipe">
         

@@ -87,20 +87,20 @@ flex: 30%;
     flex: 70%;
 }
 
-.login,
-.logout{
+.login{
     text-decoration: none;
     color: rgb(37, 36, 36);
     font-size: 25px;
-    padding: 10px 5px;
+    padding: 10px 40px;
     margin: 0 10px;
     cursor: pointer;
+    
 }
 .login :hover {
     color: white;
 }
 
-.profile {
+.profile{
     display: block;
     position: absolute;
     font-size: 30px;
@@ -109,7 +109,18 @@ flex: 30%;
     border: none;
     outline: none;
     top: 22px;
-    right: 15px;
+    right: 45px;
+}
+.logout {
+    display: block;
+    position: absolute;
+    font-size: 30px;
+    color:rgb(37, 36, 36);
+    background-color:  #91F0C3;
+    border: none;
+    outline: none;
+    top: 22px;
+    right: 10px;
 }
 
 .profile :hover{
@@ -147,8 +158,7 @@ flex: 30%;
         height: 100%;
     }
 
-    .login,
-    .logout{
+    .login{
         text-decoration: none;
         color: rgb(37, 36, 36);
         font-size: 20px;
@@ -163,7 +173,6 @@ flex: 30%;
     .calendar,
     .newrecipe{
         color: rgb(37, 36, 36);
-        text-align: center;
         padding: 32px;
         width: 100%;
         transition: all 0.5s ease;
@@ -181,10 +190,12 @@ flex: 30%;
         background-color:  #91F0C3;
         border: none;
         outline: none;
-        top: 22px;
-        left: 0px;
+        top: 19px;
+        left: 15px;
     }
-    
+    nav.navbar{
+        margin-bottom: 0px;
+    }
     
       
 

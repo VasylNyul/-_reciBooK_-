@@ -1,7 +1,10 @@
 <?php
-  $mysql = new mysqli('ukr0.mysql.ukraine.com.ua', 'ukr0_recibook', '@78bT^Kp3m', 'ukr0_recibook');
+$mysql = new mysqli('ukr0.mysql.ukraine.com.ua', 'ukr0_recibook', '@78bT^Kp3m', 'ukr0_recibook');
 cors();
 session_start();
+$mysql->query("SET NAMES 'utf8';");
+$mysql->query("SET CHARACTER SET 'utf8';");
+$mysql->query("SET SESSION collation_connection = 'utf8_general_ci';");
 
 function cors() {
 
