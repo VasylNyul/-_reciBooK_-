@@ -1,10 +1,15 @@
 .newRecipe{
-    position: absolute;
     height: 100%;
-    width: 80%;
-    left: 300px;
-    padding: 20px;
+     width: 100%;
+    padding-top: 20px;
     background-image: linear-gradient(to bottom right, rgba(86,90,168, 0.7), rgba(172,174,211,0.7)), url(./search.png);
-  
-  
+   background-size: 100% 100%;
+    background-repeat: no-repeat;
+  background-attachment: fixed;
+    margin: 0;
+    padding-right: 0;
+    padding-left: 0;
+    border-right: 0px;
+    border-bottom: 0;
 }
+
