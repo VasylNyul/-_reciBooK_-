@@ -123,7 +123,7 @@ class RecipeInput extends Component {
             type='Instructions'
             name='instructions'
             rows='8'
-            cols='50'
+            cols='38'
             autoComplete='off'
             value={instructions}
             onChange={this.handleChange}/>
