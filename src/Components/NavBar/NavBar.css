@@ -58,8 +58,6 @@ background: #eff8f4;
     padding: 30px 20px;
     margin: 10 10px;
     cursor: pointer;
-    
-    
 }
 
 .home:hover{
@@ -73,13 +71,14 @@ background: #eff8f4;
 }
 .shoplist:hover{
     color: #176629;
+    
 }
 .calendar:hover{
     color: #176629;
 }
 
 .icons{
-flex: 30%;
+    flex: 30%;
     display: grid;
     place-items: center;
 }
@@ -180,6 +179,7 @@ flex: 30%;
         width: 100%;
         transition: all 0.5s ease;
         cursor: pointer;
+
     }
 
     
