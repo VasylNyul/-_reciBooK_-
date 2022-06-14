@@ -2,7 +2,7 @@ import axios from 'axios';
 
 function LogOut() {
 
-    axios.get(`http://127.0.0.1:9091/LogOut.php`, { withCredentials: true, headers: { 'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json', } })
+    axios.get(`https://recibook.space/LogOut.php`, { withCredentials: true, headers: { 'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json', } })
 
 }
 

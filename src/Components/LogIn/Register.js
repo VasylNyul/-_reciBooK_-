@@ -63,7 +63,7 @@ const handleSubmit = (e) => {
     password: password
   };
   
-  axios.post(`http://127.0.0.1:9091/reg.php`, {
+  axios.post(`https://recibook.space/reg.php`, {
     customer }, {
       withCredentials: true,
       headers: {

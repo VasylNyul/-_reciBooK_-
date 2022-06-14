@@ -11,7 +11,7 @@ function Profile() {
   let navigate = useNavigate();
     
 const getUser = () => {
-  axios.get(`http://127.0.0.1:9091/profile.php`, { withCredentials: true, headers: { 'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json', } })
+  axios.get(`https://recibook.space/profile.php`, { withCredentials: true, headers: { 'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json', } })
 };
     
   return (

@@ -31,7 +31,7 @@ const handleSubmit = (e) => {
 		short_bio: shortbio,
         fFood: favoriteFood
 	  };
-	  axios.post(`http://127.0.0.1:9091/EditProfile.php`, {
+	  axios.post(`https://recibook.space/EditProfile.php`, {
 		edit }, {
 		  withCredentials: true,
 		  headers: {
