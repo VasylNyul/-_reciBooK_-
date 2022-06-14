@@ -4,18 +4,16 @@
   
 }
 h1 {
+  margin-left: 1430px;
   color: #91F0C3 ;
   margin-top: 30px;
   margin-bottom: 60px;
   text-align: center;
-  
 }
 #main{
-
   height: 100%;
   width: 100%;
-  /* background-image: linear-gradient(to bottom right, rgba(86,90,168, 0.7), rgba(172,174,211,0.7)), url(./photo1.png); */
-  background-size: 100% 100%;
+   background-size: 100% 100%;
   background-repeat: no-repeat;
 background-attachment: fixed;
   margin: 0;
@@ -23,7 +21,6 @@ background-attachment: fixed;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
     'Lucida Sans', Arial, sans-serif;
     margin-bottom: 0px;
-  
 }
 .Search{
   height: 100%;
@@ -37,8 +34,8 @@ background-attachment: fixed;
 }
 
 input {
-  width: 54%;
-  margin-left: 3%;
+  width: 77%;
+  margin-left: 330px;
   margin-right:3%;
   padding: 18px 10px;
   border-radius: 4px;
@@ -57,11 +54,10 @@ input {
 }
 .single-meal {
   box-shadow: 1px 0.5px #758298;
-  /* margin: 10px; */
-  margin-left: 3%;
-  margin-right:3%;
   display: block;
-  width: 74%;
+  text-align: center;
+  width: 77%;
+  margin-left: 330px;
   background-color:  #C7DDCC;
 }
 .single-meal img{
@@ -98,6 +94,7 @@ input {
 
 input {
   width: 94%;
+  
   margin-left: 3%;
   margin-right:3%;
   padding: 18px 10px;
