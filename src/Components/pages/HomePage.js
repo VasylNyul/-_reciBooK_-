@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import "./Search.css";
 import axios from 'axios';
-
 class HomePage extends Component {
   state = {
     searchValue: "",
@@ -42,10 +41,10 @@ class HomePage extends Component {
     }).map((meal, index) => (
       <div class="single-meal" key={index}>
         <h2>{meal.strMeal || meal.recipe_name}</h2> 
-        {meal.instruction}
-        {meal.ingredients.map(ingredient => <div>{ingredient}</div>)}
-        { <img src={meal.strMealThumb || meal.photo} alt="meal-thumbnail" /> }
-      </div>
+         { <img src={meal.strMealThumb || meal.photo} alt="meal-thumbnail" /> }
+      {meal.ingredients.map(ingredient => <div>{ingredient}</div>)}
+      {meal.instruction}
+         </div>
     ))}
           </div>
         
