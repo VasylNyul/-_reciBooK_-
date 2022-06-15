@@ -1,0 +1,492 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+.container1{
+   width: 100%;
+   height: 100%;
+   background-color: #ffffff;
+}
+
+.block1 {
+    width: 1440px ;
+    height: 70px;
+    background-color: rgb(255, 255, 255);
+    margin-top: 5px;
+    margin-left: 4px;
+    padding-top: 10px;
+    
+
+}
+
+
+.topblock {
+
+    display: flex;
+    justify-content: center;
+
+}
+.block2 {
+    width: 720px ;
+    height: 570px;
+    background: url(food.jpg);
+
+}
+
+.block3 {
+    width: 720px ;
+    height: 570px;
+    background: url(FON1.jpg );
+}
+
+#h5 {color: white;
+    text-align: start;
+    padding: 30px 30px;
+    margin: 30px 30px;
+   
+}
+#h51 {color: white;
+    text-align: left;
+    padding: 20px;
+    margin: 10px;
+    font-size: 20px;
+    
+}
+
+#h52 {color: white;
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+    font-size: 17px;
+
+}
+
+
+#h11 {font-size:45px;
+}
+
+#h4 {font-size: 25px;
+   
+  
+}
+
+#h44 {font-size: 18px;
+    color:#404040;
+}
+
+#h6 {font-size: 18px;
+}
+
+#h66 {color: #404040;
+}
+#h7 {color: #404040;
+    white-space: pre-wrap;
+}
+
+#h00 {color: black;
+    text-align: center;
+    margin:10px 10px 10px 10px;
+    padding: 20px 20px;
+    white-space: pre-wrap;
+
+}
+
+
+
+
+.button33{
+    width: 40%;
+    background-color: #000000;
+    color: #fff;
+    padding: 20px;
+    transition: .4s ease-out;
+    cursor: pointer;
+    min-width: 163px;
+    max-width: 200px;
+    margin-left:55%  ;
+    margin-bottom: 50%;
+    margin-top: 5%;
+    
+}
+.button33:hover{
+    background-color: #404040;
+
+
+}
+
+
+
+
+
+
+.block4 {
+    width: 400px;
+    height: 27px;
+    margin-top: 40px;
+    margin-left: 80px;
+    font-size: 27px;
+
+
+
+}
+
+.topblock1{    
+    display: flex;
+    justify-content: center;
+
+}
+
+.block5 {
+    width: 557px ;
+    height: 368px;
+    margin-top: 50px ;
+    background: url(admin1.jpg);
+
+
+}
+
+.block6  {
+    width: 557px ;
+    height: 368px;
+    margin-top: 50px ;
+    margin-left: 103px ;
+    background: url(search.jpg);
+}
+
+
+.topblock2 {
+    display: flex;
+    justify-content:center;
+
+}
+
+.block7 {
+    width: 557px ;
+    height: 250px;
+
+}
+
+.block8 {
+    width: 557px ;
+    height: 250px;
+    margin-left: 103px ;
+
+}
+
+
+
+
+
+
+
+.topblock3 { 
+    display: flex;
+    justify-content: space-around;
+}
+.block9 {
+    width: 363px;
+    height: 240px;
+    background: url(kalendar.jpg);
+    margin-top: -2%;
+}
+
+.block10{
+    width: 363px;
+    height: 240px;
+    background: url(magazin.jpg);
+    margin-top: -2%;
+}
+
+.block11{
+    width: 363px;
+    height: 240px;
+    background: url(watch.jpg);
+    margin-top: -2%;
+}
+
+
+
+
+
+
+
+
+
+
+.topblock4 {
+    display:flex;
+    justify-content:space-around;
+    
+}
+
+
+.block12 {
+    width: 363px;
+    height: 150px;
+   
+    
+}
+
+.block13 {
+    width: 363px;
+    height: 150px;
+}
+
+.block14 {
+    width: 363px;
+    height: 150px;
+}
+
+
+
+
+.button {
+    display: flex;
+    justify-content:center;
+    margin-top: 65px;
+    margin-bottom: 30px;
+}
+    
+
+
+.button button{
+   
+
+    background-color: #303030;
+    color: #fff;
+    padding: 9px 9px;
+    margin: 10px 10px 10px 10px;
+    transition: .4s ease-out;
+    cursor: pointer;
+    min-width: 133px;
+    max-width: 260px;
+
+}
+
+
+.button:hover{
+    background-color:#404040;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.button11 {
+    display: flex;
+    justify-content:center;
+    margin:100px;
+    
+}
+
+.button11 button{
+    width: 30%;
+    background-color: #303030;
+    color: #fff;
+    padding: 9px 9px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    transition: .4s ease-out;
+    cursor: pointer;
+    min-width: 133px;
+    max-width: 260px;
+}
+
+
+.button11:hover{
+    background-color: #404040;
+}
+
+
+
+
+
+
+
+
+.topblock6 { 
+    display: flex;
+    justify-content: space-around;
+    margin-top: -40px;
+}
+
+.block15{
+    width: 363px;
+    height: 240px;
+    background: url(food1.jpg);
+    margin-top: 5%;
+    
+}
+
+.block16{
+    width: 363px;
+    height: 240px;
+    background: url(food2.jpg);
+    margin-top: 5%;
+}
+
+.block17{
+    width: 363px;
+    height: 240px;
+    background: url(food3.jpg);
+    margin-top: 5%;
+}
+
+.topblock7 {
+    display: flex;
+    justify-content:space-around}
+
+
+.block18 {
+    width: 363px;
+    height: 150px;
+  
+    
+}
+
+.block19 {
+    width: 363px;
+    height: 150px;
+}
+
+.block20 {
+
+    width: 363px;
+    height: 150px;
+}
+
+
+
+.block21 {
+    width: 400px;
+    height: 27px;
+    margin-top: 70px;
+    margin-left: 80px;
+    font-size: 20px;
+}
+
+
+
+
+
+
+
+.block22 {
+   
+    width: 400px;
+    height: 27px;
+    margin-top: 120px;
+    margin-left: 80px;
+    font-size: 20px;
+}
+
+.topblock8{ 
+    display: flex;
+    justify-content: space-around;
+    margin-top: -40px;
+    
+}
+
+.block23{
+    width: 363px;
+    height: 240px;
+    background: url(borshch.jpg);
+    margin-top: 5%;
+}
+
+.block24{
+    width: 363px;
+    height: 240px;
+    background: url(vafli.jpg);
+    margin-top: 5%;
+}
+
+.block25{
+    width: 363px;
+    height: 240px;
+    background: url(spain.jpg);
+    margin-top: 5%;
+}
+
+.topblock9 {
+    display: flex;
+    justify-content:space-around}
+
+
+.block26 {
+    width: 363px;
+    height: 150px;
+   
+    
+}
+
+.block27{
+    width: 363px;
+    height: 150px;
+    text-align: left;
+}
+
+.block28 {
+    width: 363px;
+    height: 150px;
+}
+
+.block29 {
+    width: 100% ;
+    height: 120px;
+    background-color: rgb(0, 0, 0);
+    padding: 40px 20px;
+    margin-top: 50px;
+   
+    font-size: 30px;
+}
+
+.topblock10{    
+    display: flex;
+    justify-content: center;
+    margin-top: -40px;
+
+}
+
+.block30 {
+    width: 557px ;
+    height: 368px;
+    margin-top: 110px ;
+    background: url(food5.jpg);
+
+
+}
+
+.block31  {
+    width: 557px ;
+    height: 368px;
+    margin-top: 110px ;
+    background: url(fon3.jpg);
+}
+
+h5{text-align: start;
+    padding: 10px 0px;
+
+
+}
+
+h3 {text-align: start;
+    padding: 40px 0px;
+    /* margin: 30px; */
+}
+
+
+
+
