@@ -55,7 +55,7 @@ class RecipeInput extends Component {
        ingredients: this.state.ingredients,
        img:  this.state.img
     };
-    axios.post(`http://127.0.0.1:9091/NewRecipe.php`, { Recipe1 }, {
+    axios.post(`https://recibook.space/NewRecipe.php`, { Recipe1 }, {
       withCredentials: true,
       headers: {
 			'Access-Control-Allow-Origin': '*',

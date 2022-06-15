@@ -140,7 +140,7 @@ useEffect(
   return (
     <div>
 
-      <h1>Список продуктів</h1>
+      <h1>Список покупок</h1>
       <ShopListForm onSubmit={addTodo} />
       <Shop
         todos={todos}

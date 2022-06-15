@@ -1,6 +1,6 @@
 {
-    "appId": "io.ionic.recibook",
-    "appName": "recibook",
+    "appId": "io.ionic.recibook1",
+    "appName": "recibook1",
     "bundledWebRuntime": false,
     "npmClient": "npm",
     "webDir": "build",

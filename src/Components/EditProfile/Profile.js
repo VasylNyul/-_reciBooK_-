@@ -16,7 +16,6 @@ const getUser = () => {
     
   return (
    <div className="UserInform">
-   <h3>Дані користувача</h3>
    <button onClick={getUser} className="btn2" >
 		Користувач
 		</button>
