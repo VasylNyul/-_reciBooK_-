@@ -22,4 +22,4 @@ jobs:
       run: npm install
 
     - name: Build code
-      run: npm run build
+      run: npm build
